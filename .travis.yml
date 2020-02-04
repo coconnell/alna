@@ -15,7 +15,7 @@ after_success:
 # Login to Docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 # push to docker hub
-  - docker push caleboconnell/alna-client
-  - docker push caleboconnell/alna-nginx
-  - docker push caleboconnell/alna-server
-  - docker push caleboconnell/alna-worker
+  - docker push caleboconnell/alna-client:latest
+  - docker push caleboconnell/alna-nginx:latest
+  - docker push caleboconnell/alna-server:latest
+  - docker push caleboconnell/alna-worker:latest
