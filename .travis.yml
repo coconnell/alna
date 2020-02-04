@@ -11,7 +11,7 @@ after_success:
   - docker build -t caleboconnell/alna-client ./client
   - docker build -t caleboconnell/alna-nginx ./nginx
   - docker build -t caleboconnell/alna-server ./server
-  - docker build -t calebovonnell/alna-worker ./worker
+  - docker build -t caleboconnell/alna-worker ./worker
 # Login to Docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 # push to docker hub
