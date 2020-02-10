@@ -19,3 +19,15 @@ after_success:
   - docker push caleboconnell/alna-nginx:latest
   - docker push caleboconnell/alna-server:latest
   - docker push caleboconnell/alna-worker:latest
+
+deploy:
+  provider: elasticbeanstalk
+  region: us-east-1
+  app: alna-app
+  env: AlnaApp-env
+  bucket_name: elasticbeanstalk-us-east-1-013962559831
+  bucket_path: alna-app
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
